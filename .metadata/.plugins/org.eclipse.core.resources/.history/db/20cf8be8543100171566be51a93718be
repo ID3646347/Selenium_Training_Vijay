@@ -1,0 +1,22 @@
+package com.adactin.testcases;
+
+import org.testng.annotations.Test;
+
+import com.adactin.pages.LoginPage;
+
+public class LoginPageTestCase {
+	LoginPage loginPage;
+	@Test
+	public void correctLogin(){
+		loginPage = new LoginPage();
+		loginPage.setTxtUsername("hiamal007");
+		loginPage.clickBtnLogin();
+	}
+	
+	@Test
+	public void incorrectLogin(){
+		loginPage.setTxtUsername("hiamal");
+		loginPage.clickBtnLogin();
+	}
+
+}

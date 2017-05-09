@@ -1,0 +1,10 @@
+package com.com.java;
+
+public class WindowSwitch {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

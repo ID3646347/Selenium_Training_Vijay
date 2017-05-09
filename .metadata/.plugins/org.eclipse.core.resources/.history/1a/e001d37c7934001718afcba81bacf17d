@@ -1,0 +1,13 @@
+package com.com.java;
+
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class WindowSwitch {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver","C:/Users/hadmin/Downloads/geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.online.citibank.co.in/");
+	}
+
+}

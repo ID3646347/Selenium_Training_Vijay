@@ -1,0 +1,16 @@
+[0509/122706.379:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0509/122706.384:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0509/122706.385:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0509/122706.385:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0509/122706.385:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0509/122706.385:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0509/122706.385:ERROR:exception_snapshot_win.cc(87)] thread ID 660 not found in process
+[0509/122706.385:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
+[0509/123224.224:ERROR:process_reader_win.cc(173)] ResumeThread: The parameter is incorrect. (0x57)
+[0509/123224.224:ERROR:process_reader_win.cc(114)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0509/123224.239:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0509/123224.239:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0509/123224.239:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0509/123224.239:ERROR:process_reader_win.cc(114)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0509/123224.239:ERROR:process_reader_win.cc(114)] NtOpenThread: An invalid Client ID was specified.  (0xc000000b)
+[0509/123224.726:ERROR:scoped_process_suspend.cc(38)] NtResumeProcess: An attempt was made to access an exiting process.  (0xc000010a)

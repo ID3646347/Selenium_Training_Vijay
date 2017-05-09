@@ -1,0 +1,20 @@
+package com.adactin.testcases;
+
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import com.adactin.pages.LoginPage;
+
+public class LoginPageTest {
+	
+	@Test
+	public void txtUsernameText(){
+		LoginPage loginPage = new LoginPage();
+		loginPage.setTxtUsername("hiamal007");
+		System.out.println(loginPage.getTxtUsername());
+		Assert.assertEquals("hiamal007", loginPage.getTxtUsername());
+	}
+	
+	
+}

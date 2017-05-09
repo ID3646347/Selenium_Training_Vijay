@@ -1,0 +1,63 @@
+package com.com.java;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+public class AdactinLogin {
+	WebDriver driver;
+	
+	@BeforeClass
+	public void beforeTest(){
+		System.setProperty("webdriver.gecko.driver","C:/Users/hadmin/Downloads/geckodriver.exe");
+		driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+	}
+	
+	@BeforeMethod
+	public void beforeMethod(){
+		driver.get("http://adactin.com/HotelApp/");
+	}
+
+	@Test
+	public void correctLogin() {
+		WebElement element = driver.findElement(By.id("username"));
+		element.sendKeys("hiamal007");
+
+		driver.findElement(By.id("password")).sendKeys("test");
+		driver.findElement(By.id("password")).sendKeys(Keys.TAB);
+
+		driver.findElement(By.id("login")).click();
+	}
+  
+	@Test
+	public void incorrectLogin() {
+		WebElement element = driver.findElement(By.id("username"));
+		element.sendKeys("hiamal007");
+
+		driver.findElement(By.id("password")).sendKeys("test123");
+		driver.findElement(By.id("password")).sendKeys(Keys.TAB);
+
+		driver.findElement(By.id("login")).click();
+	} 
+	
+	@AfterMethod
+	public void afterMethod(){
+		System.out.println("After Method");
+	}
+
+	@AfterClass
+	public void afterTest() {
+		System.out.println("After Test");
+	}
+
+}

@@ -1,0 +1,30 @@
+package com.com.java;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class WindowSwitch {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.gecko.driver","C:/Users/hadmin/Downloads/geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.get("https://www.online.citibank.co.in/");
+		driver.findElement(By.linkText("Login")).click();
+		for(String handle: driver.getWindowHandles())
+			driver.switchTo().window(handle);
+		new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(By.id("User_Id")));
+		driver.findElement(By.id("User_Id")).sendKeys("Amal");
+		driver.close();
+		driver.findElement(By.linkText("CAREERS")).click();
+		driver.wait(5000);
+		driver.quit();
+		
+	}
+
+}

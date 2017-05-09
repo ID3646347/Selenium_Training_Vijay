@@ -1,0 +1,15 @@
+package com.java;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class AdactinLogin {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.gecko.driver","C:/Users/hadmin/Downloads/geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("http://adactin.com/HotelApp/");
+		
+	}
+
+}

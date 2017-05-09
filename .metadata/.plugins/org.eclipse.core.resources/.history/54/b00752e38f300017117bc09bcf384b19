@@ -1,0 +1,31 @@
+package com.com.java;
+
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Test;
+
+public class AdactinLogin {
+	
+	@BeforeTest
+	public void beforeTest(){
+		
+	}
+
+	@Test
+  public void f1() {
+	  System.out.println("Test1");
+  }
+  
+  @Test
+  public void f2() {
+	  System.out.println("Test2");
+  } 
+
+  @AfterTest
+  public void afterTest() {
+	  System.out.println("After Test");
+  }
+
+}

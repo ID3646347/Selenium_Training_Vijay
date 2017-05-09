@@ -1,0 +1,32 @@
+package com.adactin.pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class LoginPage extends Base {
+	@FindBy(id="username")
+	WebElement txtUsername;
+	
+	@FindBy(id="password")
+	WebElement txtPassword;
+	
+	@FindBy(id="button")
+	WebElement btnLogin;
+	
+	public LoginPage(){
+		PageFactory.initElements(driver, this);
+	}
+	
+	public String getTxtUsername(){
+		return txtUsername.getAttribute("value");
+	}
+	
+	public void setTxtUsername(String text){
+		txtUsername.sendKeys(text);
+	}
+	
+	public void clickBtnLogin(){
+		btnLogin.click();
+	}
+}

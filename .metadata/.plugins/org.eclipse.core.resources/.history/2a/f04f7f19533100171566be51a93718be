@@ -1,0 +1,14 @@
+package com.adactin.testcases;
+
+import org.junit.Test;
+
+import com.adactin.pages.LoginPage;
+
+public class LoginPageTest {
+	
+	@Test
+	public void txtUsernameText(){
+		LoginPage loginPage = new LoginPage();
+		
+	}
+}
